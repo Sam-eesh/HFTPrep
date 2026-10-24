@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cmath>
+#include "math_engine.h"
+
 
 
 int main() {
@@ -13,17 +15,20 @@ int main() {
         std::cin >> a >> symbol >> b;
 
         if (symbol == '+') {
-            std::cout<<"you chose addition and the result on adding numbers : \n"<<a+b<< std::endl;
+            std::cout<<"you chose addition and the result on adding numbers : \n"<<add(a,b)<< std::endl;
         }
         else if (symbol == '-'){
-            std::cout<<"you chose subtaction and the result on subtracting numbers : \n"<<a-b<< std::endl;
+            std::cout<<"you chose subtaction and the result on subtracting numbers : \n"<<subtract(a,b)<< std::endl;
         }
         else if (symbol == '*' ) {
-            std::cout<<"you chose multiplication and the result on multiplying numbers : \n"<<a*b<< std::endl;
+            std::cout<<"you chose multiplication and the result on multiplying numbers : \n"<<multiply(a,b)<< std::endl;
         }
         else if (symbol == '/') {
-            if (b == 0) {std::cout<<"Error: Division by zero is undefined. \n"<< std::endl;}
-            else{ std::cout<<"you chose division and the result on dividing numbers : \n"<<a/b<< std::endl;
+            if (b!=0) {
+                std::cout<<"you chose division and the result is"<<divide(a,b)<< std::endl;
+            }
+            else {
+                std::cout<<"division by zero is undefined." << std::endl;
             }
         }
         else if (symbol == '^') {
