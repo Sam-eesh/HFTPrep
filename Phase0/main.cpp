@@ -9,12 +9,8 @@ int main() {
         double a,b;
         char symbol;
 
-        std::cout<<"enter the first number \n";
-        std::cin>>a;
-        std::cout<<"enter the operation \n";
-        std::cin>>symbol;
-        std::cout<<"enter the second number\n";
-        std::cin>>b;
+        std::cout << "Enter your calculation (e.g., 5 + 5, or 8 l 2): ";
+        std::cin >> a >> symbol >> b;
 
         if (symbol == '+') {
             std::cout<<"you chose addition and the result on adding numbers : \n"<<a+b<< std::endl;
